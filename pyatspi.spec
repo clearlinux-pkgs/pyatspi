@@ -4,7 +4,7 @@
 #
 Name     : pyatspi
 Version  : 2.34.0
-Release  : 19
+Release  : 20
 URL      : https://download.gnome.org/sources/pyatspi/2.34/pyatspi-2.34.0.tar.xz
 Source0  : https://download.gnome.org/sources/pyatspi/2.34/pyatspi-2.34.0.tar.xz
 Summary  : No detailed summary available
