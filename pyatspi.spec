@@ -4,12 +4,12 @@
 #
 Name     : pyatspi
 Version  : 2.34.0
-Release  : 20
+Release  : 21
 URL      : https://download.gnome.org/sources/pyatspi/2.34/pyatspi-2.34.0.tar.xz
 Source0  : https://download.gnome.org/sources/pyatspi/2.34/pyatspi-2.34.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : GPL-2.0
+License  : GPL-2.0 LGPL-2.0 Python-2.0
 Requires: pyatspi-license = %{version}-%{release}
 Requires: pyatspi-python = %{version}-%{release}
 Requires: pyatspi-python3 = %{version}-%{release}
@@ -59,13 +59,14 @@ python3 components for the pyatspi package.
 
 %prep
 %setup -q -n pyatspi-2.34.0
+cd %{_builddir}/pyatspi-2.34.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568075352
+export SOURCE_DATE_EPOCH=1583204667
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -86,10 +87,12 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1568075352
+export SOURCE_DATE_EPOCH=1583204667
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pyatspi
-cp COPYING.GPL %{buildroot}/usr/share/package-licenses/pyatspi/COPYING.GPL
+cp %{_builddir}/pyatspi-2.34.0/COPYING %{buildroot}/usr/share/package-licenses/pyatspi/e8d05da65f87ed0a4a38615cd4f1d9c21cce531b
+cp %{_builddir}/pyatspi-2.34.0/COPYING.GPL %{buildroot}/usr/share/package-licenses/pyatspi/06877624ea5c77efe3b7e39b0f909eda6e25a4ec
+cp %{_builddir}/pyatspi-2.34.0/tests/pyatspi/pasytest/COPYING-PSF %{buildroot}/usr/share/package-licenses/pyatspi/1cd860a7e028ea38573d27165b529439037321f3
 %make_install
 
 %files
@@ -97,7 +100,9 @@ cp COPYING.GPL %{buildroot}/usr/share/package-licenses/pyatspi/COPYING.GPL
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/pyatspi/COPYING.GPL
+/usr/share/package-licenses/pyatspi/06877624ea5c77efe3b7e39b0f909eda6e25a4ec
+/usr/share/package-licenses/pyatspi/1cd860a7e028ea38573d27165b529439037321f3
+/usr/share/package-licenses/pyatspi/e8d05da65f87ed0a4a38615cd4f1d9c21cce531b
 
 %files python
 %defattr(-,root,root,-)
