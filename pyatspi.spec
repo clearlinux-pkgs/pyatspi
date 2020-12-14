@@ -4,7 +4,7 @@
 #
 Name     : pyatspi
 Version  : 2.38.0
-Release  : 24
+Release  : 25
 URL      : https://download.gnome.org/sources/pyatspi/2.38/pyatspi-2.38.0.tar.xz
 Source0  : https://download.gnome.org/sources/pyatspi/2.38/pyatspi-2.38.0.tar.xz
 Summary  : No detailed summary available
