@@ -1,3 +1,13 @@
+What's new in pyatspi 2.45.90:
+
+* Add object:announcement to the list of events.
+
+* Add support for ATSPI_ROLE_PUSH_BUTTON_MENU.
+
+What's new in pyatspi 2.45.1:
+
+    Add registerEventListenerWithApp
+
 What's new in pyatspi 2.38.2:
 
 * Fix a missing return value in the testsuite.
@@ -5,6 +15,7 @@ What's new in pyatspi 2.38.2:
 * Make Selection#clearSelection work.
 
 * Fix attributeListToHash() in case there’s a colon in an attr value.
+
 What's new in pyatspi 2.38.1:
 
 * Add sanity checks to getPath and findAncestor so that we don't
