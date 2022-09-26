@@ -4,7 +4,7 @@
 #
 Name     : pyatspi
 Version  : 2.46.0
-Release  : 41
+Release  : 42
 URL      : https://download.gnome.org/sources/pyatspi/2.46/pyatspi-2.46.0.tar.xz
 Source0  : https://download.gnome.org/sources/pyatspi/2.46/pyatspi-2.46.0.tar.xz
 Summary  : No detailed summary available
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663953740
+export SOURCE_DATE_EPOCH=1664161822
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1663953740
+export SOURCE_DATE_EPOCH=1664161822
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pyatspi
 cp %{_builddir}/pyatspi-%{version}/COPYING %{buildroot}/usr/share/package-licenses/pyatspi/e8d05da65f87ed0a4a38615cd4f1d9c21cce531b || :
