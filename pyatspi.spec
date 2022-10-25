@@ -4,7 +4,7 @@
 #
 Name     : pyatspi
 Version  : 2.46.0
-Release  : 42
+Release  : 43
 URL      : https://download.gnome.org/sources/pyatspi/2.46/pyatspi-2.46.0.tar.xz
 Source0  : https://download.gnome.org/sources/pyatspi/2.46/pyatspi-2.46.0.tar.xz
 Summary  : No detailed summary available
